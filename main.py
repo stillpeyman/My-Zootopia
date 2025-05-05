@@ -19,24 +19,26 @@ def generate_animals_info(animals):
     output = ''
 
     for animal in animals:
+        output += '<li class="cards__item">'
+
         name = animal.get('name')
         if name:
-            output += f"Name: {name}\n"
+            output += f"<strong>Name:</strong> {name}<br>"
         
         diet = animal.get('characteristics', {}).get('diet')
         if diet:
-            output += f"Diet: {diet}\n"
+            output += f"<strong>Diet:</strong> {diet}<br>"
 
         location = animal.get('locations', [])
         if location:
-            output += f"Location: {location[0]}\n"
+            output += f"<strong>Location:</strong> {location[0]}<br>"
 
         animal_type = animal.get('characteristics', {}).get('type')
         if animal_type:     
-            output += f"Type: {animal_type}\n"
+            output += f"<strong>Type:</strong> {animal_type}<br>"
         
         # blank line after each animal
-        output += '\n'
+        output += '</li>'
 
     return output
 
@@ -72,7 +74,7 @@ def write_to_file(file_path, content):
 def main():
     animals_data = load_data('animals_data.json')
     animal_info = generate_animals_info(animals_data)
-    print(animal_info)
+    # print(animal_info)
     template = read_template('animals_template.html')
     animals_html = merge_template_with_data(template, animal_info)
 
@@ -81,10 +83,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
 
 
 # %%
