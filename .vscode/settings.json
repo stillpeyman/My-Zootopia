@@ -1,0 +1,12 @@
+{
+    "chat.editor.wordWrap": "on",
+    "editor.wordWrap": "on",
+    "html.format.wrapAttributes": "auto",
+    "editor.suggest.showFunctions": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
+}
