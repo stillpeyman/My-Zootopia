@@ -49,11 +49,12 @@
         }
 
         .card__title {
-          color: @gray-dark;
+          color: #696969;
           font-size: 1.25rem;
           font-weight: 300;
           letter-spacing: 2px;
           text-transform: uppercase;
+          margin-bottom: 1rem;
         }
 
         .card__text {
@@ -62,12 +63,27 @@
           line-height: 2;
           margin-bottom: 1.25rem;
         }
+
+        .card__text ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .card__text li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .card__text li strong {
+          color: #696969;
+        }
         </style>
     </head>
     <body>
-        <h1>My Animal Repository</h1>
-        <ul class="cards">
-            __REPLACE_ANIMALS_INFO__
-        </ul>
+      <h1>My Animal Repository</h1>
+      <ul class="cards">
+          __REPLACE_ANIMALS_INFO__
+      </ul>
     </body>
 </html>
